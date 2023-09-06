@@ -9,6 +9,7 @@ class User(models.Model):
     nickname = models.CharField(max_length=50)
     comment = models.CharField(max_length=100, null=True)
     email = models.EmailField(max_length=100, null=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
     
     def __str__(self) -> str:
         return self.user_id
